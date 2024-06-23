@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-//Standard for React Router Dom
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'; //Standard for React Router Dom
 import {Auth} from "./pages/auth/index"
+import {ExpenseTracker} from "./pages/dashboard/index"
+
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' exact element={<Auth />} />
-          <Route path='/' exact element={<Auth />} />
+          <Route path='/expense-tracker' element={<ExpenseTracker />} />
         </Routes>
       </Router>
 
