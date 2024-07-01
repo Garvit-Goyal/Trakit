@@ -1,10 +1,13 @@
 import {auth, provider} from "../../config/firebase-config"
 import {signInWithPopup} from "firebase/auth"
-import {useNavigate} from "react-router-dom"
+import {useNavigate, Navigate} from "react-router-dom"
+import { useGetUserInfo } from "../../hooks/useGetUserInfo"
 
 export const Auth = () => {
 
     const navigate = useNavigate();
+    const {isAuth} = useGetUserInfo();
+
     const signInWithGoogle = async () =>{
         const results = await signInWithPopup(auth, provider);
         //For keeping the user signed in even after refresh (local storage here but cookies is better).
@@ -16,6 +19,10 @@ export const Auth = () => {
         };
         localStorage.setItem("auth", JSON.stringify(authInfo)) //Local storage takes only string not objects so converting to string.
         navigate("/expense-tracker");
+    }
+
+    if (isAuth){
+        return <Navigate to="/expense-tracker"/>
     }
     return (
         <div className="login-page">
