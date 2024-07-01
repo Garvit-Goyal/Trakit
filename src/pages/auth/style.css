@@ -1,60 +1,145 @@
-.login-page {
-    width: 100vw;
-    height: calc(100vh);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    text-shadow: -1px 2px 6px rgba(2, 48, 71, 0.54);
-    background: rgb(0, 204, 255);
-    background: linear-gradient(90deg,
-            rgba(0, 204, 255, 1) 0%,
-            rgba(115, 33, 188, 1) 100%);
+    min-height: 100vh;
+    background-color: rgb(211, 209, 209);
 }
 
-/* #219ebc */
-
-.login-page p {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-/* GOOGLE BUTTOn */
-.login-with-google-btn {
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    padding: 5px 16px 12px 42px;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
-    font-size: 25px;
-    font-weight: 500;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+.login-page {
+    position: relative;
+    width: 420px;
+    height: 540px;
     background-color: white;
-    background-repeat: no-repeat;
-    background-position: 12px 11px;
+    border-radius: 10px;
 }
 
-.login-with-google-btn:hover {
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+.login-page .login-card {
+    width: 100%;
+    padding: 35px;
+    padding-top: 115px;
 }
 
-.login-with-google-btn:active {
-    background-color: #eeeeee;
+form .logo{
+    position: absolute;
+    right: 42%;
+    top: 25px;
+    height: 75px;
+    width: 75px;
 }
 
-.login-with-google-btn:focus {
-    outline: none;
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25),
-        0 0 0 3px #c8dafc;
+form h1{
+    font-size: 36px;
+    text-align: center;
 }
 
-.login-with-google-btn:disabled {
-    filter: grayscale(100%);
-    background-color: #ebebeb;
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
-    cursor: not-allowed;
+form .input-box{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.input-box input::placeholder{
+    font-family: "Poppins", sans-serif;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    translate: 0 -40%;
+    font-size: 16px;
+}
+
+form .forgot-password{
+    display: flex;
+    justify-content: right;
+    font-size: 14px;
+    margin: -5px 0 5px;
+}
+
+.forgot-password a{
+    color: rgb(21, 91, 197);
+    text-decoration: none;
+}
+
+.forgot-password a:hover{
+    text-decoration: underline;
+}
+
+form button{
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+    border: 0px solid black;
+    background: rgb(31, 162, 232);
+    color: white;
+    box-shadow: 0 0 2px black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+form button:hover{
+    box-shadow: 0 0 5px black;
+}
+
+form .sign-up{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 14px;
+
+}
+
+.sign-up a{
+    color: rgb(21, 91, 197);
+    text-decoration: none;
+}
+
+.sign-up a:hover{
+    text-decoration: underline;
+}
+
+.login-card h2{
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.signInWithGoogle button{
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+    border: 0px solid black;
+    background:white;
+    color: black;
+    box-shadow: 0 0 2px black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.signInWithGoogle button:hover{
+    box-shadow: 0 0 5px black;
 }
