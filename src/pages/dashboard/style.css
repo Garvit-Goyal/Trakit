@@ -1,24 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .expense-tracker {
-    
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: #023047;
+    min-height: 100vh;
+    background-color: white;
 }
 
-.expense-tracker h1 {
-    font-size: 40px;
+.expense-card{
+    display: flex;
 }
 
-.expense-tracker button {
-    margin-left: 10px;
-}
-
-.transactions {
-    margin-left: 43px;
+.container h1{
+    margin-left: 30px;
     margin-top: 20px;
-    padding-left: 10px;
-    width: 400px;
-    height: 400px;
-    border: 3px solid #023047;
+}
+.container .balance{
+    display: inline-block;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.container .income{
+    display: inline-block;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.container .expenses{
+    display: inline-block;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+form .typeRadio{
+    display: inline-block;
+    margin: 10px;
+}
+.expense-tracker .signOut{
+    height: 20px;
 }

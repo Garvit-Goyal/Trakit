@@ -3,8 +3,8 @@ import { signInWithPopup } from "firebase/auth"
 import { useNavigate, Navigate } from "react-router-dom"
 //import { useGetUserInfo } from "../../hooks/useGetUserInfo"
 
-import { FaUser } from "react-icons/fa"
-import { FaLock } from "react-icons/fa"
+import { FaUser, FaLock } from "react-icons/fa"
+import { FcGoogle } from "react-icons/fc"
 import "./style.css"
 
 import logo from "../../assets/budget.png"
@@ -49,14 +49,18 @@ export const Auth = () => {
                         <a href="">Forgot Password?</a>
                     </div>
 
-                    <button>Log in</button>
+                    <button className="log-in">Log in</button>
                     <div className="sign-up">
                         <p>Don't have an account? <a href="">Register</a></p>
                     </div>
                 </form>
                 <h2>-OR-</h2>
                 <div className="signInWithGoogle">
-                    <button className="login-with-google-button" onClick={signInGoogle}>Sign in with Google</button>
+                    <button className="login-with-google-button" onClick={signInGoogle}>&emsp; Sign in with Google</button>
+                    <FcGoogle className="color-google-icon" />
+                </div>
+                <div className="github">
+                    <p><a href="https://github.com/Garvit-Goyal/Trakit">Demo Login</a> | <a href="https://github.com/Garvit-Goyal/Trakit">Demo Video</a> | <a href="https://github.com/Garvit-Goyal/Trakit">GitHub</a></p>
                 </div>
             </div>
         </div>
