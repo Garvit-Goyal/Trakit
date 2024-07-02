@@ -60,7 +60,7 @@ export const Auth = () => {
                     <FcGoogle className="color-google-icon" />
                 </div>
                 <div className="github">
-                    <p><a href="https://github.com/Garvit-Goyal/Trakit">Demo Login</a> | <a href="https://github.com/Garvit-Goyal/Trakit">Demo Video</a> | <a href="https://github.com/Garvit-Goyal/Trakit">GitHub</a></p>
+                    <p><a href="https://github.com/Garvit-Goyal/Trakit">Demo Video</a> | <a href="https://github.com/Garvit-Goyal/Trakit">GitHub</a></p>
                 </div>
             </div>
         </div>

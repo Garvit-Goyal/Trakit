@@ -39,7 +39,7 @@ export const ExpenseTracker = () => {
         navigate("/")
     }
     return (
-        <>
+        <div className="page">
             <div className="expense-tracker">
                 <div className="expense-card">
                     <div className="container">
@@ -64,20 +64,14 @@ export const ExpenseTracker = () => {
                             <div className="amountInput">
                                 <input type="number" value={transactionAmount} placeholder="Amount" onChange={(e) => setTransactionAmount(e.target.value)} required />
                             </div>
-                            <div className="typeRadio">
-                                <input type="radio" id="expense" value="expense" checked={transactionType === "expense"} onChange={(e) => setTransactionType(e.target.value)} required />
-                                <label htmlFor="expense">Expense</label>
-                            </div>
-                            <div className="typeRadio">
-                                <input type="radio" id="income" value="income" checked={transactionType === "income"} onChange={(e) => setTransactionType(e.target.value)} required />
-                                <label htmlFor="income">Income</label>
-                            </div>
+                            <label htmlFor="expense"><input type="radio" id="expense" value="expense" checked={transactionType === "expense"} onChange={(e) => setTransactionType(e.target.value)} required />&nbsp; Expense</label>
+                            <input type="radio" id="income" value="income" checked={transactionType === "income"} onChange={(e) => setTransactionType(e.target.value)} required /><label htmlFor="income">&nbsp; Income</label>
                             <div>
-                                <button type="submit">Add Transaction</button>
+                                <button className="submit-transaction" type="submit">Add Transaction</button>
                             </div>
                         </form>
                         <div className="transactions">
-                            <p>Transactions</p>
+                            <p>Recent Transactions :</p>
                             <ul>
                                 {transactions.map((transaction) => {
                                     const { description, transactionAmount, transactionType } = transaction;
@@ -92,12 +86,12 @@ export const ExpenseTracker = () => {
                             </ul>
                         </div>
                     </div>
-                    {/* {profilePhoto && <div className="profile"><img src={profilePhoto}/></div>} */}
+                    {/* <div className="profile"><img src={profilePhoto}/></div> */}
                     <button className="signOut" onClick={userSignOut}>
                         Sign Out
                     </button>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
