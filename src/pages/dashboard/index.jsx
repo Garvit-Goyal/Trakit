@@ -58,11 +58,15 @@ export const ExpenseTracker = () => {
                         </div>
                         <form className="add-transactions" onSubmit={onSubmit}>
                             <h2>Add a Transaction:</h2>
-                            <div className="descInput">
-                                <input type="text" value={description} placeholder="Description" onChange={(e) => setDescription(e.target.value)} required />
-                            </div>
-                            <div className="amountInput">
-                                <input type="number" value={transactionAmount} placeholder="Amount" onChange={(e) => setTransactionAmount(e.target.value)} required />
+                            <div className="input1">
+                                <div className="descInput">
+                                    <p>Description: </p>
+                                    <input type="text" value={description} placeholder="Description" onChange={(e) => setDescription(e.target.value)} required />
+                                </div>
+                                <div className="amountInput">
+                                    <p>Amount: </p>
+                                    <input type="number" value={transactionAmount} placeholder="Amount" onChange={(e) => setTransactionAmount(e.target.value)} required />
+                                </div>
                             </div>
                             <label htmlFor="expense"><input type="radio" id="expense" value="expense" checked={transactionType === "expense"} onChange={(e) => setTransactionType(e.target.value)} required />&nbsp; Expense</label>
                             <input type="radio" id="income" value="income" checked={transactionType === "income"} onChange={(e) => setTransactionType(e.target.value)} required /><label htmlFor="income">&nbsp; Income</label>
@@ -78,8 +82,7 @@ export const ExpenseTracker = () => {
                                     return (
                                         <li>
                                             <h4>{description}</h4>
-                                            <p>Rupees {transactionAmount} : <label>{transactionType}</label></p>
-
+                                            <p>Rs. {transactionAmount} : <label>{transactionType}</label></p>
                                         </li>
                                     );
                                 })}
