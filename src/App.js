@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Auth } from "./pages/auth/index";
 import { ExpenseTracker } from "./pages/dashboard/index";
