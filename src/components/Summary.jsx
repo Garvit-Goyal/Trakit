@@ -9,7 +9,7 @@ export const Summary = () => {
         <div className="summary-card">
             <div className="balance">
                 <p>Balance</p>
-                <p>Rs.&nbsp;&nbsp;{balance}</p>
+                <p>Rs.&nbsp;&nbsp;&nbsp;{balance}</p>
             </div>
             <div className="income">
                 <p>Income</p>
